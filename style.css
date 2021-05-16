@@ -44,3 +44,15 @@ fieldset.fieldset {
   border-radius: 3px;
   padding: 30px;
 }
+
+.date-cvv {
+  display: flex;
+}
+.date {
+  width: 50%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+}
+.cvv {
+  width: 50%;
+  padding-left: calc(var(--bs-gutter-x) / 2);
+}
