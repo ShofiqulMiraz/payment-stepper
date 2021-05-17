@@ -93,8 +93,9 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for="card-number" class="form-label">Card Number:</label>
-                                    <input type="text" class="form-control" id="card-number"
-                                        placeholder="valid card number" required minlength="16" maxlength="16">
+                                    <input type="number" class="form-control" id="card-number"
+                                        placeholder="valid card number" required pattern="/^-?\d+\.?\d*$/"
+                                        onKeyPress="if(this.value.length==16) return false">
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -116,13 +117,14 @@
                                     </div>
                                     <div class="cvv">
                                         <label for="cvv" class="form-label">CVV:</label>
-                                        <input type="text" class="form-control" id="cvv" placeholder="000" required
-                                            minlength="3" maxlength="3">
+                                        <input type="number" class="form-control" id="cvv" placeholder="000" required
+                                            pattern="/^-?\d+\.?\d*$/"
+                                            onKeyPress="if(this.value.length==3) return false">
                                         <div class="valid-feedback">
                                             Looks good!
                                         </div>
                                         <div class="invalid-feedback">
-                                            Please fill up CVV
+                                            Please fill up Valid CVV
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +167,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for="mobile-number" class="form-label">Mobile No.:</label>
-                                    <input type="text" class="form-control" id="mobile-number"
+                                    <input type="number" class="form-control" id="mobile-number"
                                         placeholder="your mobile number" required>
                                     <div class="valid-feedback">
                                         Looks good!
@@ -198,7 +200,6 @@
                             </form>
                         </div>
                     </div>
-
                 </div>
                 <div id="otp-part" class="content">
                     <div class="otp-part">
