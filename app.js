@@ -1,9 +1,6 @@
-var stepper1Node = document.querySelector("#stepper1");
 var stepper1 = new Stepper(document.querySelector("#stepper1"));
-
-stepper1Node.addEventListener("show.bs-stepper", function (event) {
-  console.warn("show.bs-stepper", event);
-});
+const paymentProcessing = document.querySelector(".payment-processing");
+const paymentProcessing2 = document.querySelector(".payment-processing-step-2");
 
 // Fetch all the forms we want to apply custom Bootstrap validation styles to
 var forms = document.querySelectorAll(".needs-validation");
@@ -18,7 +15,17 @@ Array.prototype.slice.call(forms).forEach(function (form) {
         event.preventDefault();
         event.stopPropagation();
       } else {
-        stepper1.next();
+        paymentProcessing.classList.remove("d-none");
+        paymentProcessing.classList.add("d-block");
+        paymentProcessing2.classList.remove("d-none");
+        paymentProcessing2.classList.add("d-block");
+        setTimeout(() => {
+          paymentProcessing.classList.remove("d-block");
+          paymentProcessing.classList.add("d-none");
+          paymentProcessing2.classList.remove("d-block");
+          paymentProcessing2.classList.add("d-none");
+          stepper1.next();
+        }, 3000);
       }
       form.classList.add("was-validated");
     },

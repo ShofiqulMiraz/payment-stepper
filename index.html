@@ -58,21 +58,22 @@
                                         <img src="visa.jpg" alt="visa" class='visa-img'>
                                         <p>visa</p>
                                     </div>
-                                    <div class="visa">
-                                        <img src="visa.jpg" alt="visa" class='visa-img'>
-                                        <p>visa</p>
+                                    <div class="mastercard">
+                                        <img src="mastercard.png" alt="mastercard" class='mastercard-img'>
+                                        <p>mastercard</p>
                                     </div>
-                                    <div class="visa">
-                                        <img src="visa.jpg" alt="visa" class='visa-img'>
-                                        <p>visa</p>
+                                    <div class="american-express">
+                                        <img src="american-express.png" alt="american-express"
+                                            class='american-express-img'>
+                                        <p>a-express</p>
                                     </div>
-                                    <div class="visa">
-                                        <img src="visa.jpg" alt="visa" class='visa-img'>
-                                        <p>visa</p>
+                                    <div class="union-pay">
+                                        <img src="union-pay.png" alt="union-pay" class='union-pay-img'>
+                                        <p>union-pay</p>
                                     </div>
-                                    <div class="visa">
-                                        <img src="visa.jpg" alt="visa" class='visa-img'>
-                                        <p>visa</p>
+                                    <div class="ucb">
+                                        <img src="ucb.png" alt="ucb" class='ucb-img'>
+                                        <p>ucb</p>
                                     </div>
                                 </div>
                             </fieldset>
@@ -93,7 +94,7 @@
                                 <div class="col-md-12">
                                     <label for="card-number" class="form-label">Card Number:</label>
                                     <input type="text" class="form-control" id="card-number"
-                                        placeholder="valid card number" required>
+                                        placeholder="valid card number" required minlength="16" maxlength="16">
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
@@ -115,7 +116,8 @@
                                     </div>
                                     <div class="cvv">
                                         <label for="cvv" class="form-label">CVV:</label>
-                                        <input type="text" class="form-control" id="cvv" placeholder="000" required>
+                                        <input type="text" class="form-control" id="cvv" placeholder="000" required
+                                            minlength="3" maxlength="3">
                                         <div class="valid-feedback">
                                             Looks good!
                                         </div>
@@ -123,6 +125,13 @@
                                             Please fill up CVV
                                         </div>
                                     </div>
+                                </div>
+                                <div class="payment-processing d-none">
+                                    <div class="payment-content">
+                                        <div class="loader"></div>
+                                        <p>Payment Processing, Please Wait....</p>
+                                    </div>
+
                                 </div>
 
                                 <div class="col-12 text-center">
@@ -145,7 +154,7 @@
                             <form class="row g-3 mt-2 needs-validation" novalidate>
                                 <div class="col-md-12">
                                     <label for="mail-id" class="form-label">Mail ID:</label>
-                                    <input type="text" class="form-control" id="mail-id" placeholder="your email id"
+                                    <input type="email" class="form-control" id="mail-id" placeholder="your email id"
                                         required>
                                     <div class="valid-feedback">
                                         Looks good!
@@ -167,13 +176,19 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for="product-code" class="form-label">Product Code:</label>
-                                    <input type="text" class="form-control" id="product-code"
+                                    <input type="number" class="form-control" id="product-code"
                                         placeholder="insert product code" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>
                                     <div class="invalid-feedback">
                                         Please fill up Product Code
+                                    </div>
+                                </div>
+                                <div class="payment-processing-step-2 d-none">
+                                    <div class="payment-content">
+                                        <div class="loader"></div>
+                                        <p>Almost there, Please Wait....</p>
                                     </div>
                                 </div>
                                 <div class="col-12 text-center">
